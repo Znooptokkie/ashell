@@ -45,8 +45,9 @@ PanelWindow
             id: node0
             menuName: "0"
             // Bepaal startpositie - 250 & 150 zijn willekeurige waardes
-            xValue: (menuArea.width / 2) - (width / 2) + (0 * 250)
-            yValue: (menuArea.height / 2) - (height / 2) + (0 * 150)
+            startX: (menuArea.width / 2) - (width / 2) + (0 * 250)
+            startY: (menuArea.height / 2) - (height / 2) + (0 * 150)
+            
         }
 
         MenuNode
@@ -54,8 +55,8 @@ PanelWindow
             id: node1
             menuName: "1"
             // Bepaal startpositie - 250 & 150 zijn willekeurige waardes
-            xValue: (menuArea.width / 2) - (width / 2) + (1 * 250)
-            yValue: (menuArea.height / 2) - (height / 2) + (1 * 150)
+            startX: (menuArea.width / 2) - (width / 2) + (1 * 250)
+            startY: (menuArea.height / 2) - (height / 2) + (1 * 150)
         }
 
         MenuNodeConnection
@@ -63,10 +64,10 @@ PanelWindow
             width: menuArea.width
             height: menuArea.height
             // Gebruik startpositie van nodes + de helft van de node zelf
-            sX: node0.xValue + (node0.width / 2)
-            sY: node0.yValue + (node0.height / 2)
-            endX: node1.xValue + (node1.width / 2)
-            endY: node1.yValue + (node1.height / 2)
+            sX: node0.startX + (node0.width / 2)
+            sY: node0.startY + (node0.height / 2)
+            endX: node1.startX + (node1.width / 2)
+            endY: node1.startY + (node1.height / 2)
         }
     }
 }
